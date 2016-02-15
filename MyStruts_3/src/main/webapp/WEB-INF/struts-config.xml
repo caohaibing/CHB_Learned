@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<action-config>
+	<action-mappings>
+		<!--根据不同的path路径，访问各自的Action  -->
+		<action path="/servlet/delUser" type="com.caohaibing.struts.action.DelUserAction"></action>
+		<action path="/servlet/addUser" type="com.caohaibing.struts.action.AddUserAction"></action>
+		<action path="/servlet/modifyUser" type="com.caohaibing.struts.action.ModifyUserAction"></action>
+		<action path="/servlet/queryUser" type="com.caohaibing.struts.action.QueryUserAction"></action>
+	</action-mappings>
+</action-config>

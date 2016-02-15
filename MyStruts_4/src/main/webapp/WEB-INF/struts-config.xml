@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<action-config>
+	<action-mappings>
+	 	<!--根据不同的path路径，访问各自的Action  --> 
+		<action path="/servlet/addUser" type="com.caohaibing.struts.action.AddUserAction">
+			<!-- 转向页面 -->
+			<forward name="success" path="/add_success.jsp"></forward>
+			<forward name="error" path="/add_error.jsp"></forward>
+		</action>
+		
+		<action path="/servlet/delUser" type="com.caohaibing.struts.action.DelUserAction">
+			<forward name="success" path="/del_success.jsp"></forward>
+			<forward name="error" path="/del_error.jsp"></forward>
+		</action>
+
+		<action path="/servlet/modifyUser" type="com.caohaibing.struts.action.ModifyUserAction">
+			<forward name="success" path="/modify_success.jsp"></forward>
+			<forward name="error" path="/modify_error.jsp"></forward>
+		</action>
+		
+		<action path="/servlet/queryUser" type="com.caohaibing.struts.action.QueryUserAction">
+			<forward name="success" path="/query_success.jsp">/</forward>
+			<forward name="error" path="/query_error.jsp"></forward>
+		</action>
+	</action-mappings>
+</action-config>

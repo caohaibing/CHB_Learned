@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 配置TestServlet类 -->
+  <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <!-- 配置成自己写的TestServlet的路径 -->
+        <servlet-class>com.caohaibing.struts.servlet.TestServlet</servlet-class>
+        <!-- tomacat启动时，初始化struts-config.xml的配置 -->
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts-config.xml</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+
+    </servlet>
+  
+  
+  <!-- 怎么访问与jsp的action的路径一致 -->
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <!-- 
+    <url-pattern>/servlet/TestServlet</url-pattern>
+     -->
+    <!-- 只要是.do请求都会到达servlet -->
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
