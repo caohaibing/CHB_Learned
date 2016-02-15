@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+  <bean id="dao" class="com.caohaibing.spring.dao.impl.DaoMysqlImpl" />
+  
+  <bean id="service" class="com.caohaibing.spring.service.impl.ServiceImpl" />
+	
+</beans>
